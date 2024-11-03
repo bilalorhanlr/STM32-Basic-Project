@@ -1,0 +1,17 @@
+19:01:28 **** Incremental Build of configuration Debug for project uart_kesme_tutorial ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "uart_kesme_tutorial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/bilalorhanlar/Desktop/stm32_project/uart_kesme_tutorial/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="uart_kesme_tutorial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: uart_kesme_tutorial.elf
+ 
+arm-none-eabi-size   uart_kesme_tutorial.elf 
+arm-none-eabi-objdump -h -S  uart_kesme_tutorial.elf  > "uart_kesme_tutorial.list"
+   text	   data	    bss	    dec	    hex	filename
+   6204	    112	   1592	   7908	   1ee4	uart_kesme_tutorial.elf
+Finished building: default.size.stdout
+ 
+Finished building: uart_kesme_tutorial.list
+ 
+
+19:01:29 Build Finished. 0 errors, 0 warnings. (took 972ms)
+

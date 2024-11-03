@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;uart_servo_tutorial&apos; to &apos;potentiometer_servo_&amp;_dc-motor_tutorial&apos;" description="Rename resource &apos;uart_servo_tutorial&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/uart_servo_tutorial" name="potentiometer_servo_&amp;_dc-motor_tutorial" stamp="1723204691200" updateReferences="true"/>
+</session>

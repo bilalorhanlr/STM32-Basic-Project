@@ -1,0 +1,17 @@
+18:17:16 **** Incremental Build of configuration Debug for project pwm_dc-motor_tutorial ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pwm_dc-motor_tutorial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/bilalorhanlar/Desktop/stm32_project/pwm_dc-motor_tutorial/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pwm_dc-motor_tutorial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pwm_dc-motor_tutorial.elf
+ 
+arm-none-eabi-size   pwm_dc-motor_tutorial.elf 
+arm-none-eabi-objdump -h -S  pwm_dc-motor_tutorial.elf  > "pwm_dc-motor_tutorial.list"
+   text	   data	    bss	    dec	    hex	filename
+   1328	     12	   1572	   2912	    b60	pwm_dc-motor_tutorial.elf
+Finished building: default.size.stdout
+ 
+Finished building: pwm_dc-motor_tutorial.list
+ 
+
+18:17:17 Build Finished. 0 errors, 0 warnings. (took 1s.89ms)
+

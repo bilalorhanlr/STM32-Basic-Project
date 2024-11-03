@@ -1,0 +1,44 @@
+#include "stm32f4xx.h"
+
+void SPI1_Init(void) {
+    // GPIO yapılandırması (PA4: NSS, PA5: SCK, PA6: MISO, PA7: MOSI)
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;  // GPIOA clock'u etkinleştir
+    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;   // SPI1 clock'u etkinleştir
+
+    // PA5 (SCK), PA6 (MISO), PA7 (MOSI) pinlerini alternatif fonksiyon modunda ayarla
+    GPIOA->MODER |= (2 << (2 * 5)) | (2 << (2 * 6)) | (2 << (2 * 7));
+    GPIOA->AFR[0] |= (5 << (4 * 5)) | (5 << (4 * 6)) | (5 << (4 * 7));
+
+    // PA4 (NSS) pini giriş olarak ayarla
+    GPIOA->MODER &= ~(3 << (2 * 4));
+    GPIOA->PUPDR |= (1 << (2 * 4)); // Pull-up
+
+    // SPI1 yapılandırması (Slave modunda)
+    SPI1->CR1 = 0; // CR1 register'ını resetle
+    SPI1->CR1 |= SPI_CR1_MSTR; // Master modunu devre dışı bırak
+    SPI1->CR1 &= ~SPI_CR1_BR;  // Baud rate'yi en düşük değere ayarla
+    SPI1->CR1 |= SPI_CR1_CPOL | SPI_CR1_CPHA; // Clock polarity ve phase
+    SPI1->CR2 = 0;  // CR2 register'ını resetle
+    SPI1->CR1 |= SPI_CR1_SPE; // SPI'yi etkinleştir
+
+    // RXNE interrupt'u etkinleştir
+    SPI1->CR2 |= SPI_CR2_RXNEIE;
+    NVIC_EnableIRQ(SPI1_IRQn);
+}
+
+volatile uint8_t received_data = 0;
+
+void SPI1_IRQHandler(void) {
+    if (SPI1->SR & SPI_SR_RXNE) {
+        received_data = SPI1->DR; // Gelen veriyi al
+        SPI1->DR = received_data; // Aynı veriyi geri gönder
+    }
+}
+
+int main(void) {
+    SPI1_Init();  // SPI1'i başlat
+
+    while (1) {
+        // Burada veri işleyebilirsin
+    }
+}

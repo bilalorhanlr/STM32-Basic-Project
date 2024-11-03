@@ -1,0 +1,86 @@
+13:54:28 **** Incremental Build of configuration Debug for project FENTEK EC ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'SPI1_Init':
+../Core/Src/main.c:5:5: error: 'RCC' undeclared (first use in this function)
+    5 |     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_SPI1EN;
+      |     ^~~
+../Core/Src/main.c:5:5: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:5:21: error: 'RCC_APB2ENR_IOPAEN' undeclared (first use in this function)
+    5 |     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_SPI1EN;
+      |                     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:5:42: error: 'RCC_APB2ENR_SPI1EN' undeclared (first use in this function)
+    5 |     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_SPI1EN;
+      |                                          ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:8:5: error: 'GPIOA' undeclared (first use in this function)
+    8 |     GPIOA->CRL &= ~(GPIO_CRL_CNF5 | GPIO_CRL_CNF6 | GPIO_CRL_CNF7);
+      |     ^~~~~
+../Core/Src/main.c:8:21: error: 'GPIO_CRL_CNF5' undeclared (first use in this function)
+    8 |     GPIOA->CRL &= ~(GPIO_CRL_CNF5 | GPIO_CRL_CNF6 | GPIO_CRL_CNF7);
+      |                     ^~~~~~~~~~~~~
+../Core/Src/main.c:8:37: error: 'GPIO_CRL_CNF6' undeclared (first use in this function)
+    8 |     GPIOA->CRL &= ~(GPIO_CRL_CNF5 | GPIO_CRL_CNF6 | GPIO_CRL_CNF7);
+      |                                     ^~~~~~~~~~~~~
+../Core/Src/main.c:8:53: error: 'GPIO_CRL_CNF7' undeclared (first use in this function)
+    8 |     GPIOA->CRL &= ~(GPIO_CRL_CNF5 | GPIO_CRL_CNF6 | GPIO_CRL_CNF7);
+      |                                                     ^~~~~~~~~~~~~
+../Core/Src/main.c:9:20: error: 'GPIO_CRL_CNF5_1' undeclared (first use in this function)
+    9 |     GPIOA->CRL |= (GPIO_CRL_CNF5_1 | GPIO_CRL_CNF7_1); // PA5 ve PA7 Input mode floating
+      |                    ^~~~~~~~~~~~~~~
+../Core/Src/main.c:9:38: error: 'GPIO_CRL_CNF7_1' undeclared (first use in this function)
+    9 |     GPIOA->CRL |= (GPIO_CRL_CNF5_1 | GPIO_CRL_CNF7_1); // PA5 ve PA7 Input mode floating
+      |                                      ^~~~~~~~~~~~~~~
+../Core/Src/main.c:10:20: error: 'GPIO_CRL_CNF6_1' undeclared (first use in this function)
+   10 |     GPIOA->CRL |= (GPIO_CRL_CNF6_1 | GPIO_CRL_MODE6_1); // PA6 Output mode, AF push-pull
+      |                    ^~~~~~~~~~~~~~~
+../Core/Src/main.c:10:38: error: 'GPIO_CRL_MODE6_1' undeclared (first use in this function)
+   10 |     GPIOA->CRL |= (GPIO_CRL_CNF6_1 | GPIO_CRL_MODE6_1); // PA6 Output mode, AF push-pull
+      |                                      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:13:20: error: 'GPIO_CRL_CNF4' undeclared (first use in this function)
+   13 |     GPIOA->CRL &= ~GPIO_CRL_CNF4;
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:14:19: error: 'GPIO_CRL_CNF4_1' undeclared (first use in this function)
+   14 |     GPIOA->CRL |= GPIO_CRL_CNF4_1; // PA4 Input mode floating
+      |                   ^~~~~~~~~~~~~~~
+../Core/Src/main.c:17:5: error: 'SPI1' undeclared (first use in this function)
+   17 |     SPI1->CR1 = 0; // SPI1 kontrol register'ını sıfırla
+      |     ^~~~
+../Core/Src/main.c:18:18: error: 'SPI_CR1_MSTR' undeclared (first use in this function)
+   18 |     SPI1->CR1 |= SPI_CR1_MSTR; // Master değil, Slave modundayız
+      |                  ^~~~~~~~~~~~
+../Core/Src/main.c:19:18: error: 'SPI_CR1_SSM' undeclared (first use in this function)
+   19 |     SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI; // Yazılım NSS yönetimi
+      |                  ^~~~~~~~~~~
+../Core/Src/main.c:19:32: error: 'SPI_CR1_SSI' undeclared (first use in this function)
+   19 |     SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI; // Yazılım NSS yönetimi
+      |                                ^~~~~~~~~~~
+../Core/Src/main.c:20:18: error: 'SPI_CR1_SPE' undeclared (first use in this function)
+   20 |     SPI1->CR1 |= SPI_CR1_SPE; // SPI'yi etkinleştir
+      |                  ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:23:1: error: unknown type name 'uint8_t'
+   23 | uint8_t SPI1_ReceiveData(void) {
+      | ^~~~~~~
+../Core/Src/main.c: In function 'SPI1_ReceiveData':
+../Core/Src/main.c:25:14: error: 'SPI1' undeclared (first use in this function)
+   25 |     while (!(SPI1->SR & SPI_SR_RXNE));
+      |              ^~~~
+../Core/Src/main.c:25:25: error: 'SPI_SR_RXNE' undeclared (first use in this function)
+   25 |     while (!(SPI1->SR & SPI_SR_RXNE));
+      |                         ^~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:31:5: error: unknown type name 'uint8_t'
+   31 |     uint8_t received_data;
+      |     ^~~~~~~
+../Core/Src/main.c:31:13: warning: variable 'received_data' set but not used [-Wunused-but-set-variable]
+   31 |     uint8_t received_data;
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'SPI1_ReceiveData':
+../Core/Src/main.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+13:54:28 Build Failed. 23 errors, 2 warnings. (took 455ms)
+

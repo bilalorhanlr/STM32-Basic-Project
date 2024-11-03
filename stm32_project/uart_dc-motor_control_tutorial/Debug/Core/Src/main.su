@@ -1,0 +1,10 @@
+../Core/Src/main.c:3:6:SystemClock_Config	4	static
+../Core/Src/main.c:16:6:GPIO_Init	4	static
+../Core/Src/main.c:38:6:ADC_Init	4	static
+../Core/Src/main.c:54:6:TIM3_Init	4	static
+../Core/Src/main.c:71:6:setMotorSpeed	16	static
+../Core/Src/main.c:76:6:UART2_Write	16	static
+../Core/Src/main.c:82:9:UART2_Read	4	static
+../Core/Src/main.c:88:6:UART2_Init	4	static
+../Core/Src/main.c:99:6:delay_ms	24	static
+../Core/Src/main.c:104:5:main	16	static

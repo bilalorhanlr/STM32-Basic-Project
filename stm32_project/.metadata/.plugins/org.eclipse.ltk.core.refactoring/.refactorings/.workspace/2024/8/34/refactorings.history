@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;uart_dot_matrix_tutorial/Core/Src/num.c&apos;" deleteContents="false" description="Delete resource &apos;uart_dot_matrix_tutorial/Core/Src/num.c&apos;" element1="/uart_dot_matrix_tutorial/Core/Src/num.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1724342536053"/>
+</session>

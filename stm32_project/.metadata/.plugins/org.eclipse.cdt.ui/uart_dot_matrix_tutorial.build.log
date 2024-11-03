@@ -1,0 +1,56 @@
+17:25:41 **** Build of configuration Debug for project uart_dot_matrix_tutorial ****
+make -j7 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c:76:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:36:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c:86:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:97:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:81:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:39:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c:62:
+/Users/bilalorhanlar/Desktop/stm32_project/uart_dot_matrix_tutorial/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29:10: fatal error: stm32f4xx_hal_conf.h: No such file or directory
+   29 | #include "stm32f4xx_hal_conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+17:25:41 Build Failed. 15 errors, 0 warnings. (took 413ms)
+

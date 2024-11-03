@@ -1,0 +1,34 @@
+#include "stm32f4xx.h"
+
+void SPI1_Init(void) {
+    // SPI1'e giden GPIO pinlerini yapılandır (PA5: SCK, PA6: MISO, PA7: MOSI)
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
+
+    GPIOA->MODER &= ~((3UL << 2*4) | (3UL << 2*5) | (3UL << 2*6) | (3UL << 2*7)); // PA4, PA5, PA6, PA7
+    GPIOA->MODER |= (2UL << 2*4) | (2UL << 2*5) | (2UL << 2*6) | (2UL << 2*7);  // Alternate function mode
+    GPIOA->AFR[0] |= (5UL << 4*4) | (5UL << 4*5) | (5UL << 4*6) | (5UL << 4*7); // AF5 for SPI1
+
+    // SPI1 yapılandırması
+    SPI1->CR1 = 0; // Reset CR1
+    SPI1->CR1 |= SPI_CR1_MSTR | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_BR_0 | SPI_CR1_BR_1; // Master mode, Baud rate = fPCLK/16
+    SPI1->CR1 |= SPI_CR1_CPOL | SPI_CR1_CPHA; // Clock polarity and phase
+    SPI1->CR2 = 0;
+    SPI1->CR1 |= SPI_CR1_SPE; // SPI enable
+}
+
+uint8_t SPI1_ReceiveData(void) {
+    while (!(SPI1->SR & SPI_SR_RXNE)); // RX buffer not empty
+    return SPI1->DR; // Return received data
+}
+
+int main(void) {
+    uint8_t received_data;
+
+    SPI1_Init();  // SPI1'i başlat
+
+    while (1) {
+        received_data = SPI1_ReceiveData();
+        // Gelen veriyi işleyebilirsin
+    }
+}

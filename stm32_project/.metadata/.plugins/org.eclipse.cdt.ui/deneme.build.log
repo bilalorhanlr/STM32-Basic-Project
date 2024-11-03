@@ -1,0 +1,22 @@
+13:48:11 **** Incremental Build of configuration Debug for project deneme ****
+make -j7 all 
+arm-none-eabi-g++ -o "deneme.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/bilalorhanlar/Desktop/stm32_project/deneme/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="deneme.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: deneme.elf
+ 
+arm-none-eabi-size   deneme.elf 
+arm-none-eabi-objdump -h -S  deneme.elf  > "deneme.list"
+arm-none-eabi-objcopy  -O ihex  deneme.elf  "deneme.hex"
+arm-none-eabi-objcopy  -O binary  deneme.elf  "deneme.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1328	     12	   1572	   2912	    b60	deneme.elf
+Finished building: default.size.stdout
+ 
+Finished building: deneme.list
+ 
+Finished building: deneme.hex
+Finished building: deneme.bin
+ 
+ 
+
+13:48:12 Build Finished. 0 errors, 0 warnings. (took 941ms)
+
